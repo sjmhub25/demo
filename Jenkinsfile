@@ -1,0 +1,28 @@
+Jenkinsfile
+pipeline {
+agent any
+tools {
+maven 'Maven3'
+}
+stages {
+stage('CHECKOUT') {
+steps {
+git 'https://github.com/sjmhub25/demo.git'
+}
+}
+stage('Build') {
+steps {
+dir('demo'){
+bat 'mvn clean install'
+}
+}
+}
+stage('Test') {
+steps {
+dir('demo'){
+bat 'mvn test'
+}
+}
+}
+}
+}
