@@ -18,7 +18,4 @@ pipeline {
             steps {
                 dir('demo'){
                     bat 'mvn test'
-                }
-            }
-        }
-    }
+                
