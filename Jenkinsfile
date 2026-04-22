@@ -17,5 +17,9 @@ pipeline {
         stage('Test') {
             steps {
                 dir('demo'){
-                    bat 'mvn test'
+                    bat 'mvn test'}
+            }
+        }
+    }
+}
                 
